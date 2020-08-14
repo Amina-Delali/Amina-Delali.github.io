@@ -41,7 +41,12 @@ a {
 .btn {
   
   background-color: rgba(255, 215, 0, 0.5);
-&:hover {
- color:rgba(255, 215, 0, 0.5);
+  &:hover {
+ a {
+ color: rgba(255, 215, 0, 1);
+ }
+ background-color: rgba(128,0,128,0.8);
+
+ 
 }
 }
