@@ -13,9 +13,11 @@ h1 {
 color: #ffd700;
 
 background-image: linear-gradient(120deg, rgba(217, 11, 217, 0), rgba(128, 0,128, 1)),
-                  url("{{ site.baseurl }}/assets/images/header.jpeg");
+                  url("{{ site.baseurl }}/assets/images/header-2.jpeg");
 
 background-size: cover;
+width: 100%;
+height: 100%;
 background-repeat: no-repeat;
 
 
