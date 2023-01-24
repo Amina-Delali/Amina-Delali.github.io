@@ -7,8 +7,6 @@ layout: social
 # My Social Links
 
 1. [Twitter](https://twitter.com/amina_delali)
-2. [Facebook](https://www.facebook.com/delali.amina/)
-3. [Instagram](https://www.instagram.com/amina.delali/)
-4. [Linkedin](https://www.linkedin.com/in/amina-delali/)
+2. [Linkedin](https://www.linkedin.com/in/amina-delali/)
 
 
