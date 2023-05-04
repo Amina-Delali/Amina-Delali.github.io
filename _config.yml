@@ -2,7 +2,7 @@ title:              My Itinerary
 email:              your-email@example.com
 description:        Creating A Digital Business
 author:             Amina
-baseurl:            ""
+baseurl:            "/"
 url:                "https://www.myititnerary.com"
 
 # Social Profiles
