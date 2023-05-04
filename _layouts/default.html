@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="UTF-8">
 
-{% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#800080">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  </head>
-  <body>
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>     
-     <div class="btn"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a> </div>
-     <div class="btn"><a href="tools.html">Tools</a> </div>
-     <div class="btn"> <a href="designs.html">Designs</a> </div>
-     <div class="btn"> <a href="stores.html">Stores</a> </div>
-     <div class="btn"> <a href="social.html">Social</a> </div>
-    </header>
+<html>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
+{% include head.html %}
 
-      <footer class="site-footer">
-        &copy; 2023 Amina Delali
-      </footer>
-    </main>
-  </body>
+<body>
+
+  {% include navbar.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+
+  {% include google-analytics.html %}
+
+</body>
+
 </html>
