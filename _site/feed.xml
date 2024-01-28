@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-28T13:38:42+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">Dataview Date Fields Have Properties</title><link href="http://localhost:4000/2024/01/28/Dataview-Dates-Have-Properties.html" rel="alternate" type="text/html" title="Dataview Date Fields Have Properties" /><published>2024-01-28T15:06:00+01:00</published><updated>2024-01-28T15:06:00+01:00</updated><id>http://localhost:4000/2024/01/28/Dataview%20Dates%20Have%20Properties</id><content type="html" xml:base="http://localhost:4000/2024/01/28/Dataview-Dates-Have-Properties.html">&lt;h1 id=&quot;a-date-data-type&quot;&gt;A Date Data type&lt;/h1&gt;
+
+&lt;p&gt;One of the most interesting &lt;strong&gt;Data type&lt;/strong&gt; related to &lt;strong&gt;&lt;a href=&quot;https://blacksmithgu.github.io/obsidian-dataview/&quot;&gt;Dataview&lt;/a&gt; Fields&lt;/strong&gt; in &lt;strong&gt;Obsidian&lt;/strong&gt; are &lt;strong&gt;dates&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;&lt;a href=&quot;https://blacksmithgu.github.io/obsidian-dataview/&quot;&gt;Dataview&lt;/a&gt;&lt;/strong&gt; I am talking about is the &lt;strong&gt;&lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;&lt;/strong&gt; plugin that allows you to query data from your &lt;strong&gt;Obsidian&lt;/strong&gt; notes using the &lt;strong&gt;Dataview Query Language&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;data&lt;/em&gt; is extracted from your notes &lt;strong&gt;frontmatter&lt;/strong&gt;, from your &lt;strong&gt;inline fields&lt;/strong&gt;, or from &lt;strong&gt;implicit fields&lt;/strong&gt; related to your notes. To learn more about this &lt;em&gt;data&lt;/em&gt;, you can check the following &lt;strong&gt;&lt;a href=&quot;https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/&quot;&gt;documentation&lt;/a&gt;&lt;/strong&gt; page.&lt;/p&gt;
+
+&lt;p&gt;And if you don’t know, &lt;strong&gt;Obsidian&lt;/strong&gt; is a note taking app that uses &lt;strong&gt;Markdown&lt;/strong&gt; markup language for text formatting. It allows you to take notes, easily link between them, automatically generate a &lt;strong&gt;graph&lt;/strong&gt; displaying all the connexion available between your notes, and install powerful &lt;strong&gt;plugins&lt;/strong&gt; that allow you to transform your notes, and automate your workflow while using the app.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dates&lt;/strong&gt; types are objects that can be created from  text formatted using the &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_8601&quot;&gt;&lt;em&gt;ISO8601&lt;/em&gt;&lt;/a&gt;  notation.  But when displaying their values, &lt;strong&gt;Dataview&lt;/strong&gt; will render them in a human readable format .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/date values example.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;Dataview Date values example&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-i-discovered&quot;&gt;What I discovered&lt;/h1&gt;
+
+&lt;p&gt;You can access a particular &lt;strong&gt;date&lt;/strong&gt; or &lt;strong&gt;time&lt;/strong&gt; information from the &lt;strong&gt;date&lt;/strong&gt; object itself, by accessing its properties. For example, to get the &lt;strong&gt;month&lt;/strong&gt; corresponding to a particular &lt;strong&gt;date field&lt;/strong&gt;, all you have to do is to use the &lt;strong&gt;dot&lt;/strong&gt; notation with the &lt;strong&gt;date field&lt;/strong&gt; in question.&lt;/p&gt;
+
+&lt;p&gt;For example, let say you want to display the &lt;strong&gt;month&lt;/strong&gt; property value of the &lt;strong&gt;creation date&lt;/strong&gt; field (&lt;em&gt;ctime&lt;/em&gt;) of a particular note, so you can just write:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;file.ctime.month
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are multiple &lt;strong&gt;date&lt;/strong&gt; and &lt;strong&gt;time&lt;/strong&gt; properties that you can access the same way:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.year&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.month&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.weekyear&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.week&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.weekday&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.day&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.hour&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.minute&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.second&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.ctime.millisecond&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For example, right now, I am writing this post on Obsidian. And, if I want to display the &lt;em&gt;day&lt;/em&gt; and the &lt;em&gt;hour&lt;/em&gt; of the date corresponding to the creation of the  note I am writing, I can simply use the following &lt;strong&gt;Dataview&lt;/strong&gt; expression:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```dataview
+table file.ctime.day as &quot;📅 Day&quot;,
+file.ctime.hour as &quot;⏰&quot; 
+where file =this.file
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And the result would be:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/The Result.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;The result of a dataview query on dates fields properties&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;how-i-used-it&quot;&gt;How I used it&lt;/h1&gt;
+
+&lt;p&gt;I wanted to display the &lt;strong&gt;tasks&lt;/strong&gt; planned in a particular &lt;em&gt;week&lt;/em&gt;, and the formula I was writing was already long enough, so the use of the &lt;strong&gt;date property&lt;/strong&gt; was really useful to &lt;strong&gt;shorten&lt;/strong&gt; the expression:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```dataview
+table without id file.link as Tasks,
+map(filter(file.tasks, (x)=&amp;gt;padleft(string(x.scheduled.weekyear),2,&quot;0&quot;)=substring(split(this.file.name,&quot;-&quot;)[1],1)),(x)=&amp;gt;x.text  +&quot; - (&quot;+dateformat(x.scheduled,&quot;EEE&quot;)+&quot;)&quot;) as steps
+from &quot;Execute/Projects&quot;
+where file.name[3]=&quot;-&quot;
+and length(filter(file.tasks, (x)=&amp;gt;padleft(string(x.scheduled.weekyear),2,&quot;0&quot;)=substring(split(this.file.name,&quot;-&quot;)[1],1)))&amp;gt;0
+```  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/the property.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;How a dataview date field property was used&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The expression was written inside a &lt;strong&gt;weekly note&lt;/strong&gt; with a name formatted as follow:&lt;/p&gt;
+
+&lt;p&gt;4 digits representing the year+”-W “+ 2 digits representing the week number (“yyyy-‘W’WW”). For example the &lt;strong&gt;weekly note&lt;/strong&gt; of the  &lt;em&gt;week 4&lt;/em&gt; is named: &lt;em&gt;2024-W04&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here a portion of the result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/The resutl.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;A use case result from my personal Vault&quot; /&gt;&lt;/p&gt;</content><author><name>Amina Delali</name></author><summary type="html">A Date Data type</summary></entry><entry><title type="html">Listing Files with PowerShell</title><link href="http://localhost:4000/2024/01/19/How-to-list-only-the-name-of-the-files-in-Windows-PowerShell-without-details.html" rel="alternate" type="text/html" title="Listing Files with PowerShell" /><published>2024-01-19T21:56:00+01:00</published><updated>2024-01-19T21:56:00+01:00</updated><id>http://localhost:4000/2024/01/19/How%20to%20list%20only%20the%20name%20of%20the%20files%20in%20Windows%20PowerShell%20without%20details</id><content type="html" xml:base="http://localhost:4000/2024/01/19/How-to-list-only-the-name-of-the-files-in-Windows-PowerShell-without-details.html">&lt;h1 id=&quot;used-when&quot;&gt;Used when&lt;/h1&gt;
+
+&lt;p&gt;I wanted to list the &lt;strong&gt;PNG&lt;/strong&gt; and &lt;strong&gt;SVG&lt;/strong&gt; files I have just created while working on the new design of my other website, but the default command &lt;em&gt;dir&lt;/em&gt; will list the files with other details.&lt;/p&gt;
+
+&lt;p&gt;So, to run the command, I just clicked on &lt;strong&gt;Open in Terminal&lt;/strong&gt; from the &lt;em&gt;Images&lt;/em&gt; folder, and it opened the &lt;strong&gt;PowerShell&lt;/strong&gt; automatically:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/How to list only the name of the files in Windows PowerShell without details-20240113121908819.webp&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;opening a folder in a powershell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the image below, you can see all the extra details added with the names of the existing files:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/How to list only the name of the files in Windows PowerShell without details-20240113122109714.webp&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;default dir command in powershell&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;the-solution&quot;&gt;The Solution&lt;/h1&gt;
+&lt;p&gt;knowing that my &lt;em&gt;Images&lt;/em&gt; folder didn’t contain any sub folder, and from a &lt;strong&gt;StackOverflow&lt;/strong&gt; answer available &lt;a href=&quot;https://stackoverflow.com/a/71554161&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; , I run the following command (and it worked):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-PowerShell&quot;&gt;dir *.png | % Name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And here is the result:
+&lt;img src=&quot;/img/posts/How to list only the name of the files in Windows PowerShell without details-20240113122453418.webp&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;original-answer&quot;&gt;Original Answer&lt;/h1&gt;
+
+&lt;p&gt;In the original &lt;strong&gt;StackOverflow&lt;/strong&gt; &lt;a href=&quot;https://stackoverflow.com/q/71554087&quot; target=&quot;_blank&quot;&gt;question&lt;/a&gt;, the user wanted to list &lt;em&gt;recursively&lt;/em&gt; its &lt;strong&gt;TXT&lt;/strong&gt; files from the &lt;em&gt;command prompt&lt;/em&gt; without listing the &lt;strong&gt;parent folders&lt;/strong&gt;. And the following &lt;a href=&quot;https://stackoverflow.com/a/71554161&quot; target=&quot;_blank&quot;&gt;answer&lt;/a&gt; was given to him:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;PowerShell Command&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CMD Command&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; PowerShell &lt;span class=&quot;nt&quot;&gt;-Command&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dir *.txt -r | % Name&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Amina Delali</name></author><summary type="html">Used when</summary></entry><entry><title type="html">What Is It About?</title><link href="http://localhost:4000/2023/06/18/what.html" rel="alternate" type="text/html" title="What Is It About?" /><published>2023-06-18T18:39:00+01:00</published><updated>2023-06-18T18:39:00+01:00</updated><id>http://localhost:4000/2023/06/18/what</id><content type="html" xml:base="http://localhost:4000/2023/06/18/what.html">&lt;p&gt;Each time I work on a particular project, I will have something to solve. To do that, I rely a lot on the resources I find on the internet.&lt;/p&gt;
+&lt;p&gt;But sometimes, the answers will not be straightforward, and I will have to be creative and improvise to solve the issues I will be facing.&lt;/p&gt;
+&lt;p&gt;So in this posts, I will share solutions to particular problems, that you may face your self. Especially, if you are like me, and you are trying to create a digital business. Or you are simply a digital creator. &lt;/p&gt;
+
+&lt;p&gt;I am thankful to the people that share their knowledge, and help others solving their problems. This is why, I will share here all the answers that I found useful, and that actually helped me solve the problems that  I had.&lt;/p&gt;
+
+&lt;p&gt;Not only that, but there are also a variety of tools and frameworks on the internet, that helped me a lot in my creational journey. This is why I will talk about these tools as well.&lt;/p&gt;
+
+&lt;p&gt;In the case I didn&apos;t use the tools and frameworks in question, but I thought that they may be relevant to your journey, I will also talk about them as well. &lt;/p&gt;
+&lt;p&gt;This was a concise description of what these posts will be about. The goal is to share as much as possible useful tutorials or interesting discoveries, wishing that it will help you in your creational journey. Happy Creating 🙂.&lt;/p&gt;</content><author><name>Amina Delali</name></author><summary type="html">Each time I work on a particular project, I will have something to solve. To do that, I rely a lot on the resources I find on the internet. But sometimes, the answers will not be straightforward, and I will have to be creative and improvise to solve the issues I will be facing. So in this posts, I will share solutions to particular problems, that you may face your self. Especially, if you are like me, and you are trying to create a digital business. Or you are simply a digital creator.</summary></entry></feed>
