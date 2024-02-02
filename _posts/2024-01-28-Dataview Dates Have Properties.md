@@ -15,7 +15,7 @@ One of the most interesting **Data type** related to **[Dataview](https://blacks
  
  The *data* is extracted from your notes **frontmatter**, from your **inline fields**, or from **implicit fields** related to your notes. To learn more about this *data*, you can check the following **[documentation](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)** page.
 
-And if you don't know, **Obsidian** is a note taking app that uses **Markdown** markup language for text formatting. It allows you to take notes, easily link between them, automatically generate a **graph** displaying all the connexion available between your notes, and install powerful **plugins** that allow you to transform your notes, and automate your workflow while using the app.
+And if you don't know, **Obsidian** is a note taking app that uses **Markdown** markup language for text formatting. It allows you to take notes, easily link between them, automatically generate a **graph** displaying all the connection available between your notes, and install powerful **plugins** that allow you to transform your notes, and automate your workflow while using the app.
 
 
 **Dates** types are objects that can be created from  text formatted using the [*ISO8601*](https://en.wikipedia.org/wiki/ISO_8601)  notation.  But when displaying their values, **Dataview** will render them in a human readable format .
