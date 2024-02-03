@@ -80,8 +80,9 @@ Here is the entire  **Dataview query** that I am using right now:
 ```dataview
 task from "Execute/Projects" where !completed 
 and due <= date(this.file.name)
-sort time asc
-group by  due +" " + truncate(substring(file.name,4),30)+" "+file.tags[0]+ choice(file.frontmatter.status[0]="progress"," 🧩","") +
+sort time  asc
+sort due asc
+group by  dateformat(due,"yyyy-MM-dd EEEE") +" " + truncate(substring(file.name,4),30)+" "+file.tags[0]+ choice(file.frontmatter.status[0]="progress"," 🧩","") +
 choice(contains(file.folder,"Support")," 🧰",choice(contains(file.folder,"Action")," 🎬"," 📖"))+" "+
 choice(date(today)-due>=dur("7 days"),"🟥", choice( date(today)-due>=dur("3 days")  ,"🟧",choice(date(today)-due>=dur("1 days") ,"🟨", "🟩" )  ))
 ```

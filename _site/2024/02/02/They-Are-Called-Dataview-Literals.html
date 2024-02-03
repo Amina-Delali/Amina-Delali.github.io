@@ -200,8 +200,9 @@ So first, I list only the tasks that are due before or at the <strong>note’s d
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```dataview
 task from "Execute/Projects" where !completed 
 and due &lt;= date(this.file.name)
-sort time asc
-group by  due +" " + truncate(substring(file.name,4),30)+" "+file.tags[0]+ choice(file.frontmatter.status[0]="progress"," 🧩","") +
+sort time  asc
+sort due asc
+group by  dateformat(due,"yyyy-MM-dd EEEE") +" " + truncate(substring(file.name,4),30)+" "+file.tags[0]+ choice(file.frontmatter.status[0]="progress"," 🧩","") +
 choice(contains(file.folder,"Support")," 🧰",choice(contains(file.folder,"Action")," 🎬"," 📖"))+" "+
 choice(date(today)-due&gt;=dur("7 days"),"🟥", choice( date(today)-due&gt;=dur("3 days")  ,"🟧",choice(date(today)-due&gt;=dur("1 days") ,"🟨", "🟩" )  ))
 ```
