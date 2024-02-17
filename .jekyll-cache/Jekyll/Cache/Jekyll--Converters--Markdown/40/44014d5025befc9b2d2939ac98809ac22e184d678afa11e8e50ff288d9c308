@@ -1,0 +1,104 @@
+I"n<h1 id="block-elements">Block Elements</h1>
+
+<p>If you always struggled with alignment in your <strong>html</strong>, and corresponding <strong>CSS</strong> code, especially with horizontal alignment, this may be helpful to you.</p>
+
+<p>The key idea is how to center horizontally any html element on a web page, without setting exact positioning values, in order to provide a responsive design. Knowing that the width of these elements is considered to be smaller than the viewport width.</p>
+
+<p>I discovered these two key elements to easily accomplish this alignment:</p>
+<ul>
+  <li>The display property of the html element</li>
+  <li>The margin of those elements</li>
+</ul>
+
+<p>If you have <strong>block</strong> elements, all you have to do is to set their left and right margin properties to <em>auto</em>.</p>
+
+<p>For example, a <strong>div</strong> can be centered as follow:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">35%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the code above, I set all the margin values to <strong>auto</strong>.</p>
+
+<h1 id="inline-elements">Inline Elements</h1>
+
+<p>If you have <strong>inline</strong> elements,  just change their <strong>display</strong> property to <em>block</em>, then set the corresponding <strong>left</strong> and <strong>right</strong> margins to auto.
+The example  below is an example of how to center an <strong>img</strong> <em>horizontally</em>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">90%</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the code above, I also set; at the same time, the <strong>margin-top</strong> and <strong>margin-bottom</strong> to <em>10px</em>.</p>
+
+<h1 id="the-special-case-of-text-elements">The Special Case of Text Elements</h1>
+
+<p>For <strong>block text elements</strong>, like <strong>headers</strong> and <strong>paragraphs</strong> consider two situations:</p>
+<ul>
+  <li>The text will have no particular background, and no specific width (the default values will be applied)</li>
+  <li>The text will have a width smaller than its parent element, and a specific background color</li>
+</ul>
+
+<p>In the first case, all you have to do, is to set the <strong>text-align</strong> property to <em>center</em>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For the second case, you have also to set the <strong>margin-right</strong> and <strong>margin-left</strong> properties to <em>auto</em>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span><span class="m">#98817b</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span><span class="no">white</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For the <strong>inline text</strong> element, you have to first set their <strong>display</strong> property to <em>block</em>, then consider the previously cited cases:</p>
+<ul>
+  <li>If they have no particular background color and no small width, just set their <strong>text-align</strong> element to center:</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">span</span><span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>In the other hand, if you want to have a background color and a particular width, you must also set the <strong>margin-left</strong> and <strong>margin-right</strong> to <em>auto</em>:</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">span</span><span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span><span class="m">#6d9a79</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="my-use-case">My Use Case</h1>
+
+<p>I combined different types of elements, and centered all of them horizontally applying the rules I talked about above, and here is the result:</p>
+
+<p>&lt;img src=”/img/posts/result-align-horizontal.png” width=100% height=100%&gt;</p>
+
+<p>The corresponding code can be found here. I added to enhance the responsiveness of the display, <strong>minimum-width</strong> values for most of the elements. The <strong>image</strong> element being automatically resized according to its parent <strong>div</strong> element.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="zYbeVzG" data-user="aminaAIM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/aminaAIM/pen/zYbeVzG">
+  Center an Image Horizontally</a> by Amina (<a href="https://codepen.io/aminaAIM">@aminaAIM</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+:ET

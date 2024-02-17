@@ -1,0 +1,40 @@
+I"É
+<h1 id="used-when">Used when</h1>
+
+<p>I wanted to list the <strong>PNG</strong> and <strong>SVG</strong> files I have just created while working on the new design of my other website, but the default command <em>dir</em> will list the files with other details.</p>
+
+<p>So, to run the command, I just clicked on <strong>Open in Terminal</strong> from the <em>Images</em> folder, and it opened the <strong>PowerShell</strong> automatically:</p>
+
+<p><img src="/img/posts/How to list only the name of the files in Windows PowerShell without details-20240113121908819.webp" width="100%" height="100%" alt="opening a folder in a powershell" /></p>
+
+<p>From the image below, you can see all the extra details added with the names of the existing files:</p>
+
+<p><img src="/img/posts/How to list only the name of the files in Windows PowerShell without details-20240113122109714.webp" width="100%" height="100%" alt="default dir command in powershell" /></p>
+
+<h1 id="the-solution">The Solution</h1>
+<p>knowing that my <em>Images</em> folder didnâ€™t contain any sub folder, and from a <strong>StackOverflow</strong> answer available <a href="https://stackoverflow.com/a/71554161" target="_blank">here</a> , I run the following command (and it worked):</p>
+
+<pre><code class="language-PowerShell">dir *.png | % Name
+</code></pre>
+
+<p>And here is the result:
+<img src="/img/posts/How to list only the name of the files in Windows PowerShell without details-20240113122453418.webp" width="100%" height="100%" /></p>
+
+<h1 id="original-answer">Original Answer</h1>
+
+<p>In the original <strong>StackOverflow</strong> <a href="https://stackoverflow.com/q/71554087" target="_blank">question</a>, the user wanted to list <em>recursively</em> its <strong>TXT</strong> files from the <em>command prompt</em> without listing the <strong>parent folders</strong>. And the following <a href="https://stackoverflow.com/a/71554161" target="_blank">answer</a> was given to him:</p>
+
+<ul>
+  <li><strong>PowerShell Command</strong></li>
+</ul>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">*.</span><span class="nf">txt</span><span class="w"> </span><span class="nt">-r</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">Name</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li><strong>CMD Command</strong></li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> PowerShell <span class="nt">-Command</span> <span class="s2">"dir *.txt -r | % Name"</span>
+</code></pre></div></div>
+:ET

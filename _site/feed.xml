@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-03T09:56:29+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">They Are Called Dataview Literals</title><link href="http://localhost:4000/2024/02/02/They-Are-Called-Dataview-Literals.html" rel="alternate" type="text/html" title="They Are Called Dataview Literals" /><published>2024-02-02T15:30:00+01:00</published><updated>2024-02-02T15:30:00+01:00</updated><id>http://localhost:4000/2024/02/02/They%20Are%20Called%20Dataview%20Literals</id><content type="html" xml:base="http://localhost:4000/2024/02/02/They-Are-Called-Dataview-Literals.html">&lt;h1 id=&quot;what-are-dataview-literals&quot;&gt;What Are Dataview Literals&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-17T16:55:33+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">Automatically Centering Elements Horizontally with CSS</title><link href="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html" rel="alternate" type="text/html" title="Automatically Centering Elements Horizontally with CSS" /><published>2024-02-17T18:28:00+01:00</published><updated>2024-02-17T18:28:00+01:00</updated><id>http://localhost:4000/2024/02/17/Automatically%20Centering%20Elements%20Horizontally%20with%20CSS</id><content type="html" xml:base="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html">&lt;h1 id=&quot;block-elements&quot;&gt;Block Elements&lt;/h1&gt;
+
+&lt;p&gt;If you always struggled with alignment in your &lt;strong&gt;html&lt;/strong&gt;, and corresponding &lt;strong&gt;CSS&lt;/strong&gt; code, especially with horizontal alignment, this may be helpful to you.&lt;/p&gt;
+
+&lt;p&gt;The key idea is how to center horizontally any html element on a web page, without setting exact positioning values, in order to provide a responsive design. Knowing that the width of these elements is considered to be smaller than the viewport width.&lt;/p&gt;
+
+&lt;p&gt;I discovered these two key elements to easily accomplish this alignment:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The display property of the html element&lt;/li&gt;
+  &lt;li&gt;The margin of those elements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have &lt;strong&gt;block&lt;/strong&gt; elements, all you have to do is to set their left and right margin properties to &lt;em&gt;auto&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, a &lt;strong&gt;div&lt;/strong&gt; can be centered as follow:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;35%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the code above, I set all the margin values to &lt;strong&gt;auto&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;inline-elements&quot;&gt;Inline Elements&lt;/h1&gt;
+
+&lt;p&gt;If you have &lt;strong&gt;inline&lt;/strong&gt; elements,  just change their &lt;strong&gt;display&lt;/strong&gt; property to &lt;em&gt;block&lt;/em&gt;, then set the corresponding &lt;strong&gt;left&lt;/strong&gt; and &lt;strong&gt;right&lt;/strong&gt; margins to auto.
+The example  below is an example of how to center an &lt;strong&gt;img&lt;/strong&gt; &lt;em&gt;horizontally&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;90%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the code above, I also set; at the same time, the &lt;strong&gt;margin-top&lt;/strong&gt; and &lt;strong&gt;margin-bottom&lt;/strong&gt; to &lt;em&gt;10px&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-special-case-of-text-elements&quot;&gt;The Special Case of Text Elements&lt;/h1&gt;
+
+&lt;p&gt;For &lt;strong&gt;block text elements&lt;/strong&gt;, like &lt;strong&gt;headers&lt;/strong&gt; and &lt;strong&gt;paragraphs&lt;/strong&gt; consider two situations:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The text will have no particular background, and no specific width (the default values will be applied)&lt;/li&gt;
+  &lt;li&gt;The text will have a width smaller than its parent element, and a specific background color&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the first case, all you have to do, is to set the &lt;strong&gt;text-align&lt;/strong&gt; property to &lt;em&gt;center&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For the second case, you have also to set the &lt;strong&gt;margin-right&lt;/strong&gt; and &lt;strong&gt;margin-left&lt;/strong&gt; properties to &lt;em&gt;auto&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#98817b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For the &lt;strong&gt;inline text&lt;/strong&gt; element, you have to first set their &lt;strong&gt;display&lt;/strong&gt; property to &lt;em&gt;block&lt;/em&gt;, then consider the previously cited cases:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If they have no particular background color and no specific small width, just set their &lt;strong&gt;text-align&lt;/strong&gt; element to center:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the other hand, if you want to have a background color and a particular width, you must also set the &lt;strong&gt;margin-left&lt;/strong&gt; and &lt;strong&gt;margin-right&lt;/strong&gt; to &lt;em&gt;auto&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#6d9a79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;my-use-case&quot;&gt;My Use Case&lt;/h1&gt;
+
+&lt;p&gt;I combined different types of elements, and centered all of them horizontally applying the rules I talked about above, and here is the result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/result-align-horizontal.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;Centering horizontally different html elements&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The corresponding code can be found here. I added to enhance the responsiveness of the display, &lt;strong&gt;minimum-width&lt;/strong&gt; values for most of the elements. The &lt;strong&gt;image&lt;/strong&gt; element being automatically resized according to its parent &lt;strong&gt;div&lt;/strong&gt; element.&lt;/p&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;300&quot; data-default-tab=&quot;html,result&quot; data-slug-hash=&quot;zYbeVzG&quot; data-user=&quot;aminaAIM&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/aminaAIM/pen/zYbeVzG&quot;&gt;
+  Center an Image Horizontally&lt;/a&gt; by Amina (&lt;a href=&quot;https://codepen.io/aminaAIM&quot;&gt;@aminaAIM&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name>Amina Delali</name></author><summary type="html">Block Elements</summary></entry><entry><title type="html">They Are Called Dataview Literals</title><link href="http://localhost:4000/2024/02/02/They-Are-Called-Dataview-Literals-copy.html" rel="alternate" type="text/html" title="They Are Called Dataview Literals" /><published>2024-02-02T15:30:00+01:00</published><updated>2024-02-02T15:30:00+01:00</updated><id>http://localhost:4000/2024/02/02/They%20Are%20Called%20Dataview%20Literals%20copy</id><content type="html" xml:base="http://localhost:4000/2024/02/02/They-Are-Called-Dataview-Literals-copy.html">&lt;h1 id=&quot;what-are-dataview-literals&quot;&gt;What Are Dataview Literals&lt;/h1&gt;
 
 &lt;p&gt;You can find their official definition from the &lt;strong&gt;Dataview&lt;/strong&gt; &lt;a href=&quot;https://blacksmithgu.github.io/obsidian-dataview/reference/literals/&quot;&gt;&lt;strong&gt;Documentation website&lt;/strong&gt;&lt;/a&gt;, but this is how I am going to describe them: they are the values that you use inside your &lt;strong&gt;Dataview&lt;/strong&gt; query, and that have no related &lt;strong&gt;data&lt;/strong&gt;. As a reminder, the &lt;strong&gt;data&lt;/strong&gt; is the information extracted from your notes frontmatter, your inline fields, and your notes implicit fields.&lt;/p&gt;
 
@@ -256,7 +357,7 @@ and length(filter(file.tasks, (x)=&amp;gt;padleft(string(x.scheduled.weekyear),2
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; PowerShell &lt;span class=&quot;nt&quot;&gt;-Command&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dir *.txt -r | % Name&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Amina Delali</name></author><summary type="html">Used when</summary></entry><entry><title type="html">What Is It About?</title><link href="http://localhost:4000/2023/06/18/what.html" rel="alternate" type="text/html" title="What Is It About?" /><published>2023-06-18T18:39:00+01:00</published><updated>2023-06-18T18:39:00+01:00</updated><id>http://localhost:4000/2023/06/18/what</id><content type="html" xml:base="http://localhost:4000/2023/06/18/what.html">&lt;p&gt;Each time I work on a particular project, I will have something to solve. To do that, I rely a lot on the resources I find on the internet.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Amina Delali</name></author><summary type="html">Used when</summary></entry><entry><title type="html">What Is It About?</title><link href="http://localhost:4000/2023/06/18/what.html" rel="alternate" type="text/html" title="What Is It About?" /><published>2023-06-18T19:39:00+02:00</published><updated>2023-06-18T19:39:00+02:00</updated><id>http://localhost:4000/2023/06/18/what</id><content type="html" xml:base="http://localhost:4000/2023/06/18/what.html">&lt;p&gt;Each time I work on a particular project, I will have something to solve. To do that, I rely a lot on the resources I find on the internet.&lt;/p&gt;
 &lt;p&gt;But sometimes, the answers will not be straightforward, and I will have to be creative and improvise to solve the issues I will be facing.&lt;/p&gt;
 &lt;p&gt;So in this posts, I will share solutions to particular problems, that you may face your self. Especially, if you are like me, and you are trying to create a digital business. Or you are simply a digital creator. &lt;/p&gt;
 

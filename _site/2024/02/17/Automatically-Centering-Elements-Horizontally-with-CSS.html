@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Automatically Centering Elements Horizontally with CSS - My Itinerary
+    
+  </title>
+
+  <meta name="description" content="Block Elements">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html">
+  <link rel="alternate" type="application/rss+xml" title="My Itinerary" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">My Itinerary</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/posts/01.png')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Automatically Centering Elements Horizontally with CSS</h1>
+            
+            <h2 class="subheading">Maybe it's not so hard!</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Amina Delali</a>
+              on February 17, 2024 &middot; <span class="reading-time" title="Estimated read time">
+  
+   4 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1 id="block-elements">Block Elements</h1>
+
+<p>If you always struggled with alignment in your <strong>html</strong>, and corresponding <strong>CSS</strong> code, especially with horizontal alignment, this may be helpful to you.</p>
+
+<p>The key idea is how to center horizontally any html element on a web page, without setting exact positioning values, in order to provide a responsive design. Knowing that the width of these elements is considered to be smaller than the viewport width.</p>
+
+<p>I discovered these two key elements to easily accomplish this alignment:</p>
+<ul>
+  <li>The display property of the html element</li>
+  <li>The margin of those elements</li>
+</ul>
+
+<p>If you have <strong>block</strong> elements, all you have to do is to set their left and right margin properties to <em>auto</em>.</p>
+
+<p>For example, a <strong>div</strong> can be centered as follow:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">35%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the code above, I set all the margin values to <strong>auto</strong>.</p>
+
+<h1 id="inline-elements">Inline Elements</h1>
+
+<p>If you have <strong>inline</strong> elements,  just change their <strong>display</strong> property to <em>block</em>, then set the corresponding <strong>left</strong> and <strong>right</strong> margins to auto.
+The example  below is an example of how to center an <strong>img</strong> <em>horizontally</em>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">90%</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the code above, I also set; at the same time, the <strong>margin-top</strong> and <strong>margin-bottom</strong> to <em>10px</em>.</p>
+
+<h1 id="the-special-case-of-text-elements">The Special Case of Text Elements</h1>
+
+<p>For <strong>block text elements</strong>, like <strong>headers</strong> and <strong>paragraphs</strong> consider two situations:</p>
+<ul>
+  <li>The text will have no particular background, and no specific width (the default values will be applied)</li>
+  <li>The text will have a width smaller than its parent element, and a specific background color</li>
+</ul>
+
+<p>In the first case, all you have to do, is to set the <strong>text-align</strong> property to <em>center</em>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For the second case, you have also to set the <strong>margin-right</strong> and <strong>margin-left</strong> properties to <em>auto</em>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span><span class="m">#98817b</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span><span class="no">white</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For the <strong>inline text</strong> element, you have to first set their <strong>display</strong> property to <em>block</em>, then consider the previously cited cases:</p>
+<ul>
+  <li>If they have no particular background color and no specific small width, just set their <strong>text-align</strong> element to center:</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">span</span><span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>In the other hand, if you want to have a background color and a particular width, you must also set the <strong>margin-left</strong> and <strong>margin-right</strong> to <em>auto</em>:</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">span</span><span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span><span class="m">#6d9a79</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="my-use-case">My Use Case</h1>
+
+<p>I combined different types of elements, and centered all of them horizontally applying the rules I talked about above, and here is the result:</p>
+
+<p><img src="/img/posts/result-align-horizontal.png" width="100%" height="100%" alt="Centering horizontally different html elements" /></p>
+
+<p>The corresponding code can be found here. I added to enhance the responsiveness of the display, <strong>minimum-width</strong> values for most of the elements. The <strong>image</strong> element being automatically resized according to its parent <strong>div</strong> element.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="zYbeVzG" data-user="aminaAIM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/aminaAIM/pen/zYbeVzG">
+  Center an Image Horizontally</a> by Amina (<a href="https://codepen.io/aminaAIM">@aminaAIM</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2024/02/02/They-Are-Called-Dataview-Literals-copy.html" data-toggle="tooltip" data-placement="top" title="They Are Called Dataview Literals">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:amina.delali2@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/amina_delali">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/AminasJourney">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/amina-delali">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/amina-delali">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/theothersideofthejourney">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Amina Delali 2024</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>
