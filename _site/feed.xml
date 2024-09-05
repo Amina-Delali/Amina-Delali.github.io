@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-17T16:59:19+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">Automatically Centering Elements Horizontally with CSS</title><link href="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html" rel="alternate" type="text/html" title="Automatically Centering Elements Horizontally with CSS" /><published>2024-02-17T18:28:00+01:00</published><updated>2024-02-17T18:28:00+01:00</updated><id>http://localhost:4000/2024/02/17/Automatically%20Centering%20Elements%20Horizontally%20with%20CSS</id><content type="html" xml:base="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html">&lt;h1 id=&quot;block-elements&quot;&gt;Block Elements&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-05T14:38:51+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">Progress bar in a Dataview Obsidian Table</title><link href="http://localhost:4000/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html" rel="alternate" type="text/html" title="Progress bar in a Dataview Obsidian Table" /><published>2024-09-05T16:18:00+01:00</published><updated>2024-09-05T16:18:00+01:00</updated><id>http://localhost:4000/2024/09/05/Create%20a%20Progress%20bar%20in%20an%20Obsidian%20Dataview%20Table</id><content type="html" xml:base="http://localhost:4000/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html">&lt;h1 id=&quot;how-to-set-up&quot;&gt;How to Set Up&lt;/h1&gt;
+
+&lt;p&gt;Imagine you have in your &lt;strong&gt;Obsidian&lt;/strong&gt; note two &lt;strong&gt;YAML&lt;/strong&gt; fields:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;target: that represents the number of tasks you will work on&lt;/li&gt;
+  &lt;li&gt;value: that represents the number of the completed task&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You want to use a &lt;strong&gt;Dataview&lt;/strong&gt; block to generate a table about information on your progress. You can simply display the values, and calculate the progress in percentage. But you can also add a &lt;strong&gt;beautiful&lt;/strong&gt; visualization for your progress: display a &lt;strong&gt;progress bar&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;When you set up your &lt;strong&gt;progress bar&lt;/strong&gt;, you must consider these two parts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the actual &lt;strong&gt;progress bar&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;the label (progress value) to add to your progress bar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The actual progress bar is defined by two values:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the maximum value. In our case, the maximum number of tasks.&lt;/li&gt;
+  &lt;li&gt;the value of progress In our case, the number of completed tasks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To define these values, you use this formula in the &lt;strong&gt;Dataview&lt;/strong&gt; block:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+&quot;&amp;lt;progress max=&quot; + target + &quot; value=&quot; + value + &quot;&amp;gt; &amp;lt;/progress&amp;gt; &quot; 
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To define the label to add, you simply calculate the value of the progress:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+	round(value/target*100) +  &quot;%&quot;
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;the-example&quot;&gt;The Example&lt;/h1&gt;
+
+&lt;p&gt;In our case, we can have this entire &lt;strong&gt;dataview&lt;/strong&gt; formula:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```dataview
+table without id
+file.link as &quot;Example&quot;,
+value as &quot;Value&quot;,
+target as &quot;Target&quot;,
+round(value / target * 100)+&quot;%&quot; as &quot;Advancement&quot;,
+&quot;&amp;lt;progress max=&quot; + target + &quot; value=&quot; + value + &quot;&amp;gt; &amp;lt;/progress&amp;gt; &quot; 
++ round(value/target*100) +  &quot;%&quot; as &quot;Progress&quot;
+from #task
+where file.name=this.file.name
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;An here is what you can have, if the &lt;strong&gt;target&lt;/strong&gt; value is equal to &lt;strong&gt;15&lt;/strong&gt;, and the &lt;strong&gt;actual value&lt;/strong&gt; of completed task is equal to: &lt;strong&gt;5&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/progress bar in dataview obsidian.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;the display of a progress bar in an obsidian dataview table&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One more thing to consider, is that you must ensure that your &lt;strong&gt;properties fields&lt;/strong&gt; are of type &lt;strong&gt;number&lt;/strong&gt;. If it is not the case, you will have to use in the formula the &lt;strong&gt;number&lt;/strong&gt; convert method, to convert them to numbers.&lt;/p&gt;</content><author><name>Amina Delali</name></author><summary type="html">How to Set Up</summary></entry><entry><title type="html">Automatically Centering Elements Horizontally with CSS</title><link href="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html" rel="alternate" type="text/html" title="Automatically Centering Elements Horizontally with CSS" /><published>2024-02-17T18:28:00+01:00</published><updated>2024-02-17T18:28:00+01:00</updated><id>http://localhost:4000/2024/02/17/Automatically%20Centering%20Elements%20Horizontally%20with%20CSS</id><content type="html" xml:base="http://localhost:4000/2024/02/17/Automatically-Centering-Elements-Horizontally-with-CSS.html">&lt;h1 id=&quot;block-elements&quot;&gt;Block Elements&lt;/h1&gt;
 
 &lt;p&gt;If you always struggled with alignment in your &lt;strong&gt;html&lt;/strong&gt;, and corresponding &lt;strong&gt;CSS&lt;/strong&gt; code, especially with horizontal alignment, this may be helpful to you.&lt;/p&gt;
 
@@ -357,7 +414,7 @@ and length(filter(file.tasks, (x)=&amp;gt;padleft(string(x.scheduled.weekyear),2
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; PowerShell &lt;span class=&quot;nt&quot;&gt;-Command&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dir *.txt -r | % Name&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Amina Delali</name></author><summary type="html">Used when</summary></entry><entry><title type="html">What Is It About?</title><link href="http://localhost:4000/2023/06/18/what.html" rel="alternate" type="text/html" title="What Is It About?" /><published>2023-06-18T19:39:00+02:00</published><updated>2023-06-18T19:39:00+02:00</updated><id>http://localhost:4000/2023/06/18/what</id><content type="html" xml:base="http://localhost:4000/2023/06/18/what.html">&lt;p&gt;Each time I work on a particular project, I will have something to solve. To do that, I rely a lot on the resources I find on the internet.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Amina Delali</name></author><summary type="html">Used when</summary></entry><entry><title type="html">What Is It About?</title><link href="http://localhost:4000/2023/06/18/what.html" rel="alternate" type="text/html" title="What Is It About?" /><published>2023-06-18T18:39:00+01:00</published><updated>2023-06-18T18:39:00+01:00</updated><id>http://localhost:4000/2023/06/18/what</id><content type="html" xml:base="http://localhost:4000/2023/06/18/what.html">&lt;p&gt;Each time I work on a particular project, I will have something to solve. To do that, I rely a lot on the resources I find on the internet.&lt;/p&gt;
 &lt;p&gt;But sometimes, the answers will not be straightforward, and I will have to be creative and improvise to solve the issues I will be facing.&lt;/p&gt;
 &lt;p&gt;So in this posts, I will share solutions to particular problems, that you may face your self. Especially, if you are like me, and you are trying to create a digital business. Or you are simply a digital creator. &lt;/p&gt;
 

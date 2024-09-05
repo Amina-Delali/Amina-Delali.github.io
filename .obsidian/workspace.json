@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md"
               }
             }
           }
@@ -157,6 +157,23 @@
   },
   "active": "654c4b9e608c0cbd",
   "lastOpenFiles": [
+    "_site/img/posts/progress bar in dataview obsidian.png",
+    "_site/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html",
+    "_site/2024/09/05",
+    "_site/2024/09",
+    "_site/posts/page2/index.html",
+    "_site/posts/page2",
+    "img/posts/progress bar in dataview obsidian.png",
+    "Pasted image 20240905142838.png",
+    "Pasted image 20240905142828.png",
+    "_posts/2024-01-19-How to list only the name of the files in Windows PowerShell without details.md",
+    "_posts/2024-01-28-Dataview Dates Have Properties.md",
+    "_posts/2024-02-17-Automatically Centering Elements Horizontally with CSS.md",
+    "_posts/2024-02-02-They Are Called Dataview Literals copy.md",
+    "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md",
+    "2024-09-05.md",
+    "Untitled.canvas",
+    "README.md",
     "Tools/tool-1.md",
     "Stores/store-1.md",
     "index.md",
@@ -164,7 +181,6 @@
     "assets/images/header-2.jpeg",
     "assets/images/header.jpeg",
     "Designs/design-1.md",
-    "README.md",
     "about.md",
     "stores.md"
   ]
