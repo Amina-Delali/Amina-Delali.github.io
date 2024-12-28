@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-05T14:38:51+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">Progress bar in a Dataview Obsidian Table</title><link href="http://localhost:4000/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html" rel="alternate" type="text/html" title="Progress bar in a Dataview Obsidian Table" /><published>2024-09-05T16:18:00+01:00</published><updated>2024-09-05T16:18:00+01:00</updated><id>http://localhost:4000/2024/09/05/Create%20a%20Progress%20bar%20in%20an%20Obsidian%20Dataview%20Table</id><content type="html" xml:base="http://localhost:4000/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html">&lt;h1 id=&quot;how-to-set-up&quot;&gt;How to Set Up&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-28T08:56:55+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">You Won’t Believe It If I Tell You!</title><link href="http://localhost:4000/2024/12/28/You-Won't-Believe-It-If-I-Tell-You!.html" rel="alternate" type="text/html" title="You Won’t Believe It If I Tell You!" /><published>2024-12-28T07:15:00+01:00</published><updated>2024-12-28T07:15:00+01:00</updated><id>http://localhost:4000/2024/12/28/You%20Won&apos;t%20Believe%20It%20If%20I%20Tell%20You!</id><content type="html" xml:base="http://localhost:4000/2024/12/28/You-Won&apos;t-Believe-It-If-I-Tell-You!.html">&lt;h1 id=&quot;what-i-am-talking-about&quot;&gt;What I Am Talking About&lt;/h1&gt;
+
+&lt;p&gt;We use the &lt;strong&gt;Dataview&lt;/strong&gt; plugin in &lt;strong&gt;Obsidian&lt;/strong&gt; to display information, and meta data about the notes availables in our vault. But sometimes, these notes may contain links (or even transclusions) of images.&lt;/p&gt;
+
+&lt;p&gt;So first, I am going to confirm that yes, it is possible to display a preview of an image inside a &lt;strong&gt;Dataview&lt;/strong&gt; table. But not only that, you can also display a resized preview of it.&lt;/p&gt;
+
+&lt;p&gt;Right now, I had found two cases in which we can manipulate these kinds of links:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You have a bulleted list in your note, and one of the items of that list contains a link (or a transclusion) of an image available inside your vault.&lt;/li&gt;
+  &lt;li&gt;You have a YAML property defined in your note that may contain links to images in your vault&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post, we are going to talk about the second case: links in a &lt;strong&gt;frontmatter&lt;/strong&gt; property.&lt;/p&gt;
+
+&lt;h1 id=&quot;this-is-how-it-works&quot;&gt;This Is How It Works&lt;/h1&gt;
+&lt;p&gt;First, there are two &lt;strong&gt;Dataview Obsidian&lt;/strong&gt; functions that we will use in our query:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;link&lt;/em&gt;: generates a link from a given file’s path or name.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;embed&lt;/em&gt;: converts a link into an embedded link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The goal is to display a table in a particular note of the small preview of images links defined in the frontmatter of several different notes available in our vault. 
+So, this is what we are going to do inside our query:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;create a link from this frontmatter property by calling the &lt;em&gt;link&lt;/em&gt; function, but we add an other parameter to specify the size in witch we are going to display the preview. In the code snippet below, these parameters are &lt;strong&gt;property_value&lt;/strong&gt;, and &lt;strong&gt;size&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;then we pass the result to the the embed function.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/dataview obsidian query code snippets for displaying a resized image.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;tdataview obsidian query code snippets for displaying a resized image&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;a-simple-example&quot;&gt;A Simple Example&lt;/h1&gt;
+&lt;p&gt;I have the note “&lt;em&gt;Images Listing Example&lt;/em&gt;”, in which I am going to Display the images defined in other notes two YAML properties:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;originalfile&lt;/em&gt;: a list of items that will contain only one link of an image available in the vault&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;processedfile&lt;/em&gt;: a list of items that will also contain only one link of the corresponding processed image (also from the vault)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, I have a list of notes that describe images. Each note, has in its frontmatter a link to an image (the original property), and an other  link  corresponding to its processed image (the processed property).&lt;/p&gt;
+
+&lt;p&gt;So, in our case, the  &lt;strong&gt;property_value&lt;/strong&gt; will be &lt;strong&gt;originalfile[0]&lt;/strong&gt; for one column, and &lt;strong&gt;processedfile[0]&lt;/strong&gt; for the second displayed column.&lt;/p&gt;
+
+&lt;p&gt;The first column will simply display the links to the corresponding notes.&lt;/p&gt;
+
+&lt;p&gt;Note that I didn’t have to use a list to define links, I could have just used a &lt;em&gt;text property&lt;/em&gt;. But this is the way I prefer defining links 🙂.&lt;/p&gt;
+
+&lt;p&gt;Now here is the query:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+table without id
+file.link as &quot;The Images Notes&quot;,
+embed(link(originalfile[0],&quot;100&quot;)) as &quot;Original&quot;,
+embed(link(processedfile[0],&quot;100&quot;)) as &quot;Processed&quot;
+from #attachement and !&quot;Itinerary/Kit/Templates&quot;
+where originalfile[0] 
+```
+ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For a bit of context:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The &lt;strong&gt;from&lt;/strong&gt; section, consider the notes tagged with #attachement and that are not a template note.&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;where&lt;/strong&gt; section, select the notes that have the &lt;strong&gt;foriginalfile&lt;/strong&gt; property set.&lt;/li&gt;
+  &lt;li&gt;The “100” parameter will correspond to the chosen size.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And here is a preview of the result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/dataview obsidian size preview image.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;the display of a dataview table containing a small preview of images&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;an-unexpected-bonus&quot;&gt;An Unexpected Bonus&lt;/h1&gt;
+
+&lt;p&gt;If you install the &lt;strong&gt;Image Toolkit&lt;/strong&gt; plugin, you can click on the images when you hover over them, and you can see a detached, bigger size preview of them:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/zoomed preview of an obsidian dataview image link.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;the display of a zoomed preview of an obsidian dataview image link.png&quot; /&gt;&lt;/p&gt;</content><author><name>Amina Delali</name></author><summary type="html">What I Am Talking About</summary></entry><entry><title type="html">Progress bar in a Dataview Obsidian Table</title><link href="http://localhost:4000/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html" rel="alternate" type="text/html" title="Progress bar in a Dataview Obsidian Table" /><published>2024-09-05T16:18:00+01:00</published><updated>2024-09-05T16:18:00+01:00</updated><id>http://localhost:4000/2024/09/05/Create%20a%20Progress%20bar%20in%20an%20Obsidian%20Dataview%20Table</id><content type="html" xml:base="http://localhost:4000/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html">&lt;h1 id=&quot;how-to-set-up&quot;&gt;How to Set Up&lt;/h1&gt;
 
 &lt;p&gt;Imagine you have in your &lt;strong&gt;Obsidian&lt;/strong&gt; note two &lt;strong&gt;YAML&lt;/strong&gt; fields:&lt;/p&gt;
 &lt;ul&gt;
