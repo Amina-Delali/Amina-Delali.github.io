@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-30T07:51:42+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">You Won’t Believe It If I Tell You!</title><link href="http://localhost:4000/2024/12/28/You-Won't-Believe-It-If-I-Tell-You!.html" rel="alternate" type="text/html" title="You Won’t Believe It If I Tell You!" /><published>2024-12-28T07:15:00+01:00</published><updated>2024-12-28T07:15:00+01:00</updated><id>http://localhost:4000/2024/12/28/You%20Won&apos;t%20Believe%20It%20If%20I%20Tell%20You!</id><content type="html" xml:base="http://localhost:4000/2024/12/28/You-Won&apos;t-Believe-It-If-I-Tell-You!.html">&lt;h1 id=&quot;what-i-am-talking-about&quot;&gt;What I Am Talking About&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-16T20:26:36+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">A Dataview Table in a Callout</title><link href="http://localhost:4000/2025/09/05/A-Dataview-In-A-callout.html" rel="alternate" type="text/html" title="A Dataview Table in a Callout" /><published>2025-09-05T20:41:00+01:00</published><updated>2025-09-05T20:41:00+01:00</updated><id>http://localhost:4000/2025/09/05/A%20Dataview%20In%20A%20callout</id><content type="html" xml:base="http://localhost:4000/2025/09/05/A-Dataview-In-A-callout.html">&lt;h1 id=&quot;a-callout&quot;&gt;A Callout&lt;/h1&gt;
+
+&lt;p&gt;A &lt;em&gt;callout&lt;/em&gt; in &lt;strong&gt;Obsidian&lt;/strong&gt; is that particular block of text in a note that allow you to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;put your text in a sort of titled box with an icon&lt;/li&gt;
+  &lt;li&gt;the title and the text are highlighted and distinguished from the rest of the text of the note&lt;/li&gt;
+  &lt;li&gt;you have the option to customize the title icon&lt;/li&gt;
+  &lt;li&gt;you also have 3 type of &lt;em&gt;callouts&lt;/em&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;a simple block: the text and the title are displayed.&lt;/li&gt;
+      &lt;li&gt;a &lt;em&gt;callout&lt;/em&gt; created with the  &lt;strong&gt;plus&lt;/strong&gt;  sign: the text and the title are by default displayed. But if you click on the &lt;strong&gt;arrow&lt;/strong&gt; button, it will close the callout, and you will see only the title.&lt;/li&gt;
+      &lt;li&gt;a &lt;em&gt;callout&lt;/em&gt; created with the  &lt;strong&gt;minus&lt;/strong&gt;  sign: only the title is displayed by default. But if you click on the &lt;strong&gt;arrow&lt;/strong&gt; button, it will open the callout, and you will see the text too..&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The 3 types of &lt;em&gt;callouts&lt;/em&gt; are shown in the pictures below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/simple callout.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;tdataview obsidian query code snippets for displaying a resized image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/callout with plus sign.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;tdataview obsidian query code snippets for displaying a resized image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/callout with minus sign.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;tdataview obsidian query code snippets for displaying a resized image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You do not have to install anything to use &lt;em&gt;callouts&lt;/em&gt;. They are an embedded feature in &lt;strong&gt;Obsidian&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;a-dataview&quot;&gt;A Dataview&lt;/h1&gt;
+
+&lt;p&gt;A &lt;em&gt;Dataview&lt;/em&gt;  is a community &lt;strong&gt;Obsidian&lt;/strong&gt; plugin that you have to install it on top of &lt;strong&gt;Obsidian&lt;/strong&gt; to be able to use it. It allows you to summarize data from your notes in &lt;em&gt;4 forms&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A table with customizable columns of the data selected.&lt;/li&gt;
+  &lt;li&gt;A column of data displayed as a list.&lt;/li&gt;
+  &lt;li&gt;A list of tasks, extracted from all the notes available in the &lt;strong&gt;Obsidian&lt;/strong&gt; vault.&lt;/li&gt;
+  &lt;li&gt;A calendar with dots indicating notes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To use the plugin you have to write a query inside a &lt;em&gt;Dataview&lt;/em&gt; block. The block starts with &lt;strong&gt;3&lt;/strong&gt; backticks followed by the word &lt;strong&gt;dataview&lt;/strong&gt;, and closed by other &lt;strong&gt;3&lt;/strong&gt; backticks. As shown below:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```dataview
+
+```  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The query is used to select the data to display,  and to define how to display this data.&lt;/p&gt;
+
+&lt;p&gt;But sometimes, you want to hide the result, and to see it only when needed. This is when you can use &lt;em&gt;callouts&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-add-a-dataview-query-to-a-callout&quot;&gt;How to add a Dataview query to a callout&lt;/h1&gt;
+
+&lt;p&gt;It’s a simple trick:  you write your query first, then you copy all of it, but not the &lt;em&gt;closing&lt;/em&gt; &lt;strong&gt;backticks&lt;/strong&gt;. Then you paste everything into the &lt;em&gt;callout&lt;/em&gt;. And if there are any blank lines in your &lt;strong&gt;dataview&lt;/strong&gt; block, delete them.&lt;/p&gt;
+
+&lt;p&gt;For example, let’s have this query that list the &lt;em&gt;notes&lt;/em&gt; in the vault that are created today:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-dataview&quot;&gt;table without id
+file.link as &quot;**Note**&quot;,
+tags as &quot;Tags&quot;
+where file.cday = date(today)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And here is the resulting table:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/dataview table.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;tdataview obsidian query code snippets for displaying a resized image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And this how you put it in the following &lt;em&gt;callout&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; [!list]- Notes Created Today
+&amp;gt; ```dataview
+table without id
+file.link as &quot;**Note**&quot;,
+tags as &quot;Tags&quot;
+where file.cday = date(today)                
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is the result (when the &lt;em&gt;callout&lt;/em&gt; is open, and when it is &lt;em&gt;closed&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/a dataview inside a callout.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;tdataview obsidian query code snippets for displaying a resized image&quot; /&gt;&lt;/p&gt;</content><author><name>Amina Delali</name></author><summary type="html">A Callout</summary></entry><entry><title type="html">You Won’t Believe It If I Tell You!</title><link href="http://localhost:4000/2024/12/28/You-Won't-Believe-It-If-I-Tell-You!.html" rel="alternate" type="text/html" title="You Won’t Believe It If I Tell You!" /><published>2024-12-28T07:15:00+01:00</published><updated>2024-12-28T07:15:00+01:00</updated><id>http://localhost:4000/2024/12/28/You%20Won&apos;t%20Believe%20It%20If%20I%20Tell%20You!</id><content type="html" xml:base="http://localhost:4000/2024/12/28/You-Won&apos;t-Believe-It-If-I-Tell-You!.html">&lt;h1 id=&quot;what-i-am-talking-about&quot;&gt;What I Am Talking About&lt;/h1&gt;
 
 &lt;p&gt;We use the &lt;strong&gt;Dataview&lt;/strong&gt; plugin in &lt;strong&gt;Obsidian&lt;/strong&gt; to display information, and meta data about the notes availables in our vault. But sometimes, these notes may contain links (or even transclusions) of images.&lt;/p&gt;
 

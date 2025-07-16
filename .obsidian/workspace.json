@@ -50,21 +50,23 @@
             }
           },
           {
-            "id": "a02a5f3a3794c9f9",
+            "id": "45c0cf95890c4766",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md",
+                "file": "_posts/2025-09-05-A Dataview In A callout.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "2024-09-05-Create a Progress bar in an Obsidian Dataview Table"
+              "title": "2025-09-05-A Dataview In A callout"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -147,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-12-28-You Won't Believe It If I Tell You!.md",
+                "file": "_posts/2025-09-05-A Dataview In A callout.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +159,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2024-12-28-You Won't Believe It If I Tell You!"
+              "title": "Backlinks for 2025-09-05-A Dataview In A callout"
             }
           },
           {
@@ -203,7 +205,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,33 +218,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8a18c8e1c3383d56",
+  "active": "45c0cf95890c4766",
   "lastOpenFiles": [
-    "_site/img/posts/zoomed preview of an obsidian dataview image link.png",
-    "img/posts/dataview obsidian query code snippets for displaying a resized image.png",
+    "favicon.png",
+    "perso-Submark.png",
     "_posts/2024-12-28-You Won't Believe It If I Tell You!.md",
-    "_site/img/posts/dataview obsidian query code snippets for displaying a resized image.png",
-    "_site/dataview obsidian query code snippets for displaying a resized image.png",
-    "_site/Pasted image 20241228084810.png",
+    "img/posts/dataview obsidian query code snippets for displaying a resized image.png",
+    "_posts/2025-09-05-A Dataview In A callout.md",
+    "_site/img/posts/a dataview inside a callout.png",
+    "img/posts/a dataview inside a callout.png",
+    "_site/img/posts/simple callout.png",
+    "_site/img/posts/dataview table.png",
+    "_site/img/posts/callout with plus sign.png",
+    "_site/img/posts/callout with minus sign.png",
+    "img/posts/callout with minus sign.png",
+    "img/posts/callout with plus sign.png",
+    "_site/img/posts/Pasted image 20250716192630.png.md",
+    "img/posts/Pasted image 20250716192630.png.md",
+    "Pasted image 20250716192630.png.md",
+    "_site/Pasted image 20250716192630.png.md",
     "_posts/2024-09-05-Create a Progress bar in an Obsidian Dataview Table.md",
+    "_site/2025/09/05/A-Dataview-In-A-callout.html",
+    "_site/2025/09/05",
+    "_site/2025/09",
+    "_site/2025",
+    "2025-09-05-A Dataview In A callout.md",
+    "_site/2025-09-05-A Dataview In A callout.html",
     "_site/2024/12/28/You-Won't-Believe-It-If-I-Tell-You!.html",
     "_site/2024/12/28/You-Won't-Believe-It-If-I-Tell-You.html",
     "_site/2024/12/28",
     "_site/2024/12",
-    "_site/img/posts/dataview obsidian size preview image.png",
     "_site/2024-12-28-You Won't Believe It If I Tell You.html",
-    "img/posts/zoomed preview of an obsidian dataview image link.png",
-    "img/posts/dataview obsidian size preview image.png",
-    "_site/posts/favicon.png",
-    "posts/favicon.png",
     "_site/Untitled.canvas",
-    "_site/Pasted image 20240905142838.png",
     "_site/2024-09-05.md",
-    "_site/2024/09/05/Create-a-Progress-bar-in-an-Obsidian-Dataview-Table.html",
-    "_site/2024/09/05",
-    "_site/2024/09",
-    "_site/posts/page2/index.html",
-    "_site/posts/page2",
     "_posts/2024-01-19-How to list only the name of the files in Windows PowerShell without details.md",
     "_posts/2024-01-28-Dataview Dates Have Properties.md",
     "_posts/2024-02-17-Automatically Centering Elements Horizontally with CSS.md",
