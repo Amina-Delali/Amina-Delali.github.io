@@ -2,7 +2,7 @@
 layout: post
 title: A Dataview Table in a Callout
 subtitle: How it is easy to combine the two
-date: 2025-09-05 18:32:00 -0109
+date: 2025-07-16 18:32:00 -0109
 background: /img/posts/01.png
 ---
 

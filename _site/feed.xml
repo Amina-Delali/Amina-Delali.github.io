@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-16T20:26:36+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">A Dataview Table in a Callout</title><link href="http://localhost:4000/2025/09/05/A-Dataview-In-A-callout.html" rel="alternate" type="text/html" title="A Dataview Table in a Callout" /><published>2025-09-05T20:41:00+01:00</published><updated>2025-09-05T20:41:00+01:00</updated><id>http://localhost:4000/2025/09/05/A%20Dataview%20In%20A%20callout</id><content type="html" xml:base="http://localhost:4000/2025/09/05/A-Dataview-In-A-callout.html">&lt;h1 id=&quot;a-callout&quot;&gt;A Callout&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-21T16:10:23+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Itinerary</title><subtitle>Learning While Creating A Digital Business</subtitle><author><name>Amina Delali</name></author><entry><title type="html">How to customize Your Obsidian Plugins</title><link href="http://localhost:4000/2025/07/21/Customize-Your-Obsidian-Plugins.html" rel="alternate" type="text/html" title="How to customize Your Obsidian Plugins" /><published>2025-07-21T12:55:00+01:00</published><updated>2025-07-21T12:55:00+01:00</updated><id>http://localhost:4000/2025/07/21/Customize%20Your%20Obsidian%20Plugins</id><content type="html" xml:base="http://localhost:4000/2025/07/21/Customize-Your-Obsidian-Plugins.html">&lt;h1 id=&quot;the-appearance-of-your-obsidian-vault&quot;&gt;The Appearance of Your Obsidian Vault&lt;/h1&gt;
+
+&lt;p&gt;You can change the appearance of your &lt;em&gt;Obsidian&lt;/em&gt; vault by selecting and installing a &lt;em&gt;theme&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of the most known and customizable one is the &lt;strong&gt;AnuPpuccin&lt;/strong&gt; theme&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/AnuPpuccin-Theme.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;Themes in Obsidian - AnuPpuccin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To be able to customize it as you wish, you have to install an other plugin: &lt;strong&gt;Style Settings&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Style Settings-Plugin.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;Style Settings Obsidian Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So you open the &lt;strong&gt;style settings view&lt;/strong&gt; from the command palette, you go to the &lt;strong&gt;AnuPpuccin&lt;/strong&gt; section, 
+an you make the changes you want.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/AnuPpuccin customization.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; alt=&quot;AnuPpuccin customization section&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can for example override the default colors, and set yours (the section is highlighted in the image above).&lt;/p&gt;
+
+&lt;p&gt;One of the colors that you can change is the &lt;strong&gt;Mantle&lt;/strong&gt; color. It will affect the interface of most of your installed plugins:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/Mantle.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; alt=&quot;Mantle Color in Style Settings Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, imagine that you selected the color shown on the image above, you will have that color applied to some of your installed plugins, like the &lt;strong&gt;Auto Card Link&lt;/strong&gt; plugin.&lt;/p&gt;
+
+&lt;h1 id=&quot;auto-card-link-plugin&quot;&gt;Auto Card Link Plugin&lt;/h1&gt;
+
+&lt;p&gt;This is an amazing &lt;em&gt;Obsidian&lt;/em&gt; plugin. You copy a link, then you paste it using either defined &lt;em&gt;hotkeys&lt;/em&gt;, or the command palette, and it will extract information from you link, to create a card, like the one in the example below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/auto card link card.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;Mantle Color in Style Settings Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see that the text is barely visible, so this is how you can fix it.&lt;/p&gt;
+
+&lt;h1 id=&quot;customize-the-auto-card-link-appearance&quot;&gt;Customize the Auto Card Link Appearance&lt;/h1&gt;
+
+&lt;p&gt;If you access the stylesheet of the plugin from this path:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Your Vault&apos;s Folder Path\.obsidian\plugins\auto-card-link\styles.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see that the customization of the card is done in this class:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/auto card link plugin code.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;The code of the auto card plugin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, all you have to do is to create a &lt;strong&gt;css&lt;/strong&gt; file, name it as you wish (in this example, it is &lt;em&gt;custom-auto-card-link.css&lt;/em&gt;) , and put it in your vault snippets folder:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Your Vault&apos;s Folder Path\.obsidian\snippets\custom-auto-card-link.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In that file, you change the background colors, as follow:&lt;/p&gt;
+
+&lt;script src=&quot;https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FDigitalCreationsLibrary%2FCODE%2Fblob%2Fmain%2FObsidian%2520Styling%2Fcustom-auto-card-link.css&amp;amp;style=default&amp;amp;type=code&amp;amp;showBorder=on&amp;amp;showLineNumbers=on&amp;amp;showFileMeta=on&amp;amp;showFullPath=on&amp;amp;showCopy=on&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Then, in your &lt;em&gt;Obsidian&lt;/em&gt;, you open &lt;strong&gt;settings&lt;/strong&gt;, you go to &lt;strong&gt;Appearance&lt;/strong&gt;. You go to the &lt;strong&gt;CSS snippets&lt;/strong&gt; section, and you toggle on the switch next to the &lt;strong&gt;css file&lt;/strong&gt; you have just created:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/toggle on snippet.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;the toggle switch to activate a style snippet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And you get the following results:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The card background color in normal state.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/new card background color.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;auto card link with a new background color&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The card background color in hover state:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/new card hover background color.png&quot; width=&quot;100%&quot; height=&quot;100%&quot; alt=&quot;auto card link with a new hover  background color&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, you can do that to any widget you wish to customize. It is much better to do it that way, than making changes directly in the code files of the widgets.&lt;/p&gt;</content><author><name>Amina Delali</name></author><summary type="html">The Appearance of Your Obsidian Vault</summary></entry><entry><title type="html">A Dataview Table in a Callout</title><link href="http://localhost:4000/2025/07/16/A-Dataview-In-A-callout.html" rel="alternate" type="text/html" title="A Dataview Table in a Callout" /><published>2025-07-16T20:41:00+01:00</published><updated>2025-07-16T20:41:00+01:00</updated><id>http://localhost:4000/2025/07/16/A%20Dataview%20In%20A%20callout</id><content type="html" xml:base="http://localhost:4000/2025/07/16/A-Dataview-In-A-callout.html">&lt;h1 id=&quot;a-callout&quot;&gt;A Callout&lt;/h1&gt;
 
 &lt;p&gt;A &lt;em&gt;callout&lt;/em&gt; in &lt;strong&gt;Obsidian&lt;/strong&gt; is that particular block of text in a note that allow you to:&lt;/p&gt;
 &lt;ul&gt;
